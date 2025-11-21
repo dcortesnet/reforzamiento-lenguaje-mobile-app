@@ -48,3 +48,24 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# Icons
+
+- <https://static.enapter.com/rn/icons/material-community.html>
+
+## Expo doctor
+
+- npx expo-doctor
+
+## Expo development
+
+- eas build -p android --profile development
+
+## Build APK
+
+- npm install -g eas-cli
+- eas login
+- eas build:configure
+- eas build -p android --profile preview --local
+- eas build -p android --profile production
+- ANDROID_HOME=$HOME/Library/Android/sdk eas build -p android --profile preview --local
