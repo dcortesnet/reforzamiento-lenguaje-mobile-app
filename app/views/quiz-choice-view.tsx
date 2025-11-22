@@ -12,7 +12,7 @@ import React, {
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const GAME_TIMER_DURATION = 60;
+const GAME_TIMER_DURATION = 65;
 
 export default function QuizChoiceView() {
   const router = useRouter();
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     marginBottom: 20,
   },
-  question: { fontSize: 36, fontWeight: "800", color: "#333" },
+  question: { fontSize: 30, fontWeight: "800", color: "#333" },
   choicesContainer: { flex: 1, justifyContent: "center" },
   choiceButton: {
     backgroundColor: "#2C7CFF",
