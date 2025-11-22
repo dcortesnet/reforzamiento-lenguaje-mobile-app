@@ -15,7 +15,7 @@ export default function LoginView() {
   const router = useRouter();
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
-  const logoImg = require("@/assets/images/reforzando-nino-1.png"); // logo principal
+  const logoImg = require("@/assets/images/reforzando-nina-1.png"); // logo principal
   // const topImage = require("@/assets/images/kid-illustration.png"); // imagen del niño o ilustración
 
   useEffect(() => {
