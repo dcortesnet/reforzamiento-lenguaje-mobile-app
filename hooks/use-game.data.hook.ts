@@ -10,7 +10,19 @@ const games = [
   },
   {
     id: 2,
-    title: "¿Qué puedo deducir?",
+    title: "Lee y deduce",
+    icon: "",
+    quizType: "choice",
+  },
+  {
+    id: 3,
+    title: "Encuentra la intención del texto",
+    icon: "",
+    quizType: "choice",
+  },
+  {
+    id: 4,
+    title: "Clasifica la palabra",
     icon: "",
     quizType: "choice",
   },
@@ -34,6 +46,20 @@ const levelsByModule: Record<
     { id: "2c", name: "Nivel 3", difficulty: "medium" },
     { id: "2d", name: "Nivel 4", difficulty: "medium" },
     { id: "2e", name: "Nivel 5", difficulty: "medium" },
+  ],
+  3: [
+    { id: "3a", name: "Nivel 1", difficulty: "medium" },
+    { id: "3b", name: "Nivel 2", difficulty: "medium" },
+    { id: "3c", name: "Nivel 3", difficulty: "medium" },
+    { id: "3d", name: "Nivel 4", difficulty: "medium" },
+    { id: "3e", name: "Nivel 5", difficulty: "medium" },
+  ],
+  4: [
+    { id: "4a", name: "Nivel 1", difficulty: "medium" },
+    { id: "4b", name: "Nivel 2", difficulty: "medium" },
+    { id: "4c", name: "Nivel 3", difficulty: "medium" },
+    { id: "4d", name: "Nivel 4", difficulty: "medium" },
+    { id: "4e", name: "Nivel 5", difficulty: "medium" },
   ],
 };
 
@@ -855,6 +881,576 @@ const quizzesByLevel: Record<
         "Quiere cocinar",
         "Va de viaje",
       ],
+    },
+  ],
+  "3a": [
+    {
+      q: "Este cartel indica que mañana no habrá clases por mantenimiento.",
+      a: 0,
+      choices: ["Informar", "Advertir", "Invitar", "Felicitar"],
+    },
+    {
+      q: "¡No toques la estufa! Está muy caliente.",
+      a: 1,
+      choices: ["Contar algo", "Advertir", "Enseñar", "Felicitar"],
+    },
+    {
+      q: "Ven a la actividad deportiva este sábado en la plaza central.",
+      a: 2,
+      choices: ["Explicar", "Advertir", "Invitar", "Ordenar"],
+    },
+    {
+      q: "Gracias por participar en el proyecto de ciencias.",
+      a: 3,
+      choices: ["Invitar", "Advertir", "Informar", "Agradecer"],
+    },
+    {
+      q: "El libro explica cómo cuidar mejor el medio ambiente.",
+      a: 2,
+      choices: ["Ordenar", "Advertir", "Enseñar", "Felicitar"],
+    },
+    {
+      q: "Se ruega mantener silencio durante la presentación.",
+      a: 1,
+      choices: ["Felicitar", "Pedir algo", "Informar", "Invitar"],
+    },
+    {
+      q: "Este texto cuenta cómo se formaron los volcanes.",
+      a: 0,
+      choices: ["Informar", "Invitar", "Ordenar", "Agradecer"],
+    },
+    {
+      q: "Recuerda reciclar tus botellas para ayudar al planeta.",
+      a: 1,
+      choices: ["Felicitar", "Advertir", "Agradecer", "Invitar"],
+    },
+    {
+      q: "Hoy celebramos el cumpleaños de nuestra maestra.",
+      a: 3,
+      choices: ["Enseñar", "Advertir", "Invitar", "Felicitar"],
+    },
+    {
+      q: "Sigue los pasos para armar el rompecabezas correctamente.",
+      a: 2,
+      choices: ["Advertir", "Felicitar", "Enseñar", "Invitar"],
+    },
+  ],
+  "3b": [
+    {
+      q: "El siguiente texto describe los síntomas de la deshidratación.",
+      a: 3,
+      choices: ["Invitar", "Advertir", "Felicitar", "Informar"],
+    },
+    {
+      q: "Por favor, apaga las luces al salir del salón.",
+      a: 1,
+      choices: ["Agradecer", "Pedir algo", "Ordenar", "Invitar"],
+    },
+    {
+      q: "No olvides revisar tu mochila antes de venir a clases.",
+      a: 0,
+      choices: ["Recordar", "Advertir", "Felicitar", "Enseñar"],
+    },
+    {
+      q: "Este afiche te invita a participar en la feria de ciencias.",
+      a: 2,
+      choices: ["Contar algo", "Advertir", "Invitar", "Pedir algo"],
+    },
+    {
+      q: "Cuidado: el piso está mojado y puedes resbalar.",
+      a: 1,
+      choices: ["Agradecer", "Advertir", "Felicitar", "Informar"],
+    },
+    {
+      q: "El texto explica el ciclo del agua paso a paso.",
+      a: 3,
+      choices: ["Advertir", "Pedir", "Felicitar", "Enseñar"],
+    },
+    {
+      q: "Gracias por tu apoyo en este proyecto escolar.",
+      a: 0,
+      choices: ["Agradecer", "Invitar", "Advertir", "Ordenar"],
+    },
+    {
+      q: "Este anuncio informa que el parque estará cerrado esta semana.",
+      a: 2,
+      choices: ["Advertir", "Felicitación", "Informar", "Pedir"],
+    },
+    {
+      q: "Ven a conocer las novedades de la biblioteca este mes.",
+      a: 1,
+      choices: ["Enseñar", "Invitar", "Advertir", "Ordenar"],
+    },
+    {
+      q: "Por tu seguridad, cruza la calle solo con luz verde.",
+      a: 3,
+      choices: ["Invitar", "Agradecer", "Pedir", "Advertir"],
+    },
+  ],
+  "3c": [
+    {
+      q: "Este folleto explica cómo actuar en caso de un incendio.",
+      a: 2,
+      choices: ["Invitar", "Felicitar", "Enseñar", "Agradecer"],
+    },
+    {
+      q: "¡No olvides hidratarte si haces ejercicio al sol!",
+      a: 1,
+      choices: ["Invitar", "Advertir", "Enseñar", "Agradecer"],
+    },
+    {
+      q: "Se prohíbe ingresar con mascotas al gimnasio.",
+      a: 0,
+      choices: ["Ordenar", "Invitar", "Informar", "Felicitar"],
+    },
+    {
+      q: "Este mensaje es para contar los logros del mes en el club.",
+      a: 3,
+      choices: ["Advertir", "Agradecer", "Invitar", "Informar"],
+    },
+    {
+      q: "Por favor, completa la encuesta para mejorar el servicio.",
+      a: 1,
+      choices: ["Advertir", "Pedir", "Felicitar", "Invitar"],
+    },
+    {
+      q: "La guía enseña cómo ahorrar energía en el hogar.",
+      a: 2,
+      choices: ["Invitar", "Advertir", "Enseñar", "Agradecer"],
+    },
+    {
+      q: "Este cartel advierte sobre objetos pesados en movimiento.",
+      a: 1,
+      choices: ["Informar", "Advertir", "Invitar", "Agradecer"],
+    },
+    {
+      q: "¡Ven a celebrar nuestro aniversario escolar!",
+      a: 2,
+      choices: ["Enseñar", "Advertir", "Invitar", "Ordenar"],
+    },
+    {
+      q: "Este mensaje agradece la participación de los voluntarios.",
+      a: 0,
+      choices: ["Agradecer", "Invitar", "Advertir", "Enseñar"],
+    },
+    {
+      q: "El texto describe cómo funciona la fotosíntesis en las plantas.",
+      a: 3,
+      choices: ["Advertir", "Pedir", "Felicitar", "Informar"],
+    },
+  ],
+  "3d": [
+    {
+      q: "Un informe detalla el impacto del uso excesivo de plásticos.",
+      a: 3,
+      choices: ["Advertir", "Felicitar", "Agradecer", "Informar"],
+    },
+    {
+      q: "Este anuncio busca que te unas al club de lectura.",
+      a: 1,
+      choices: ["Informar", "Invitar", "Agradecer", "Advertir"],
+    },
+    {
+      q: "El texto explica cómo mejorar tus hábitos de estudio.",
+      a: 2,
+      choices: ["Agradecer", "Felicitar", "Enseñar", "Invitar"],
+    },
+    {
+      q: "Cuidado: animales peligrosos en esta zona.",
+      a: 3,
+      choices: ["Agradecer", "Invitar", "Informar", "Advertir"],
+    },
+    {
+      q: "La maestra pide entregar las tareas antes del viernes.",
+      a: 0,
+      choices: ["Pedir", "Advertir", "Informar", "Agradecer"],
+    },
+    {
+      q: "Este cartel invita a una charla sobre salud mental.",
+      a: 1,
+      choices: ["Advertir", "Invitar", "Agradecer", "Felicitar"],
+    },
+    {
+      q: "El artículo describe cómo se formó el sistema solar.",
+      a: 3,
+      choices: ["Agradecer", "Invitar", "Advertir", "Informar"],
+    },
+    {
+      q: "Por favor, mantén tus pertenencias siempre a la vista.",
+      a: 1,
+      choices: ["Enseñar", "Pedir", "Agradecer", "Invitar"],
+    },
+    {
+      q: "Gracias por tu ayuda en la actividad comunitaria.",
+      a: 0,
+      choices: ["Agradecer", "Advertir", "Invitar", "Informar"],
+    },
+    {
+      q: "Este texto pretende concientizar sobre el cuidado del agua.",
+      a: 1,
+      choices: ["Invitar", "Advertir", "Agradecer", "Felicitar"],
+    },
+  ],
+  "3e": [
+    {
+      q: "El artículo pretende motivar a los jóvenes a participar en proyectos científicos.",
+      a: 2,
+      choices: ["Informar", "Advertir", "Invitar", "Felicitar"],
+    },
+    {
+      q: "Este folleto advierte sobre los riesgos de usar audífonos a volumen alto.",
+      a: 1,
+      choices: ["Invitar", "Advertir", "Enseñar", "Agradecer"],
+    },
+    {
+      q: "El texto enseña cómo mejorar la convivencia escolar.",
+      a: 2,
+      choices: ["Advertir", "Felicitar", "Enseñar", "Agradecer"],
+    },
+    {
+      q: "Este mensaje busca promover la lectura diaria en casa.",
+      a: 1,
+      choices: ["Agradecer", "Invitar", "Advertir", "Enseñar"],
+    },
+    {
+      q: "Se informa a los estudiantes que mañana habrá prueba.",
+      a: 0,
+      choices: ["Informar", "Agradecer", "Felicitar", "Advertir"],
+    },
+    {
+      q: "Este aviso pide mantener el aula limpia.",
+      a: 3,
+      choices: ["Invitar", "Informar", "Felicitar", "Pedir"],
+    },
+    {
+      q: "El texto felicita a quienes completaron el trimestre sin atrasos.",
+      a: 0,
+      choices: ["Felicitar", "Informar", "Advertir", "Invitar"],
+    },
+    {
+      q: "La guía explica cómo construir un huerto escolar.",
+      a: 2,
+      choices: ["Felicitar", "Advertir", "Enseñar", "Invitar"],
+    },
+    {
+      q: "Se advierte a los visitantes no acercarse demasiado al borde del mirador.",
+      a: 1,
+      choices: ["Felicitar", "Advertir", "Informar", "Agradecer"],
+    },
+    {
+      q: "Este texto invita a reflexionar sobre el uso responsable de la tecnología.",
+      a: 1,
+      choices: ["Advertir", "Invitar", "Enseñar", "Felicitar"],
+    },
+  ],
+  "4a": [
+    {
+      q: "correr",
+      a: 0,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "casa",
+      a: 1,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "rápido",
+      a: 2,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "ayer",
+      a: 3,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "saltar",
+      a: 0,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "feliz",
+      a: 2,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "lápiz",
+      a: 1,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "suavemente",
+      a: 3,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "caminar",
+      a: 0,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "niño",
+      a: 1,
+      choices: ["Verbo", "Sustantivo", "Adjetivo", "Adverbio"],
+    },
+  ],
+  "4b": [
+    {
+      q: "Pedro",
+      a: 1,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "ciudad",
+      a: 0,
+      choices: ["Sustantivo común", "Sustantativo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "leer",
+      a: 2,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "hermoso",
+      a: 3,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "Carolina",
+      a: 1,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "montaña",
+      a: 0,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "cantar",
+      a: 2,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "pequeño",
+      a: 3,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "río",
+      a: 0,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+    {
+      q: "Andrés",
+      a: 1,
+      choices: ["Sustantivo común", "Sustantivo propio", "Verbo", "Adjetivo"],
+    },
+  ],
+  "4c": [
+    {
+      q: "brillantemente",
+      a: 3,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "tormenta",
+      a: 0,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "gritar",
+      a: 1,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "silencioso",
+      a: 2,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "velozmente",
+      a: 3,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "montículo",
+      a: 0,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "dibujar",
+      a: 1,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "oscuro",
+      a: 2,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "temprano",
+      a: 3,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "sabiduría",
+      a: 0,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+  ],
+  "4d": [
+    {
+      q: "romper",
+      a: 0,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "caminar",
+      a: 1,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "brillante",
+      a: 2,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "cuidadosamente",
+      a: 3,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "pintar",
+      a: 0,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "dormir",
+      a: 1,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "delicado",
+      a: 2,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "lentamente",
+      a: 3,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "cortar",
+      a: 0,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+    {
+      q: "nadar",
+      a: 1,
+      choices: [
+        "Verbo transitivo",
+        "Verbo intransitivo",
+        "Adjetivo",
+        "Adverbio",
+      ],
+    },
+  ],
+  "4e": [
+    {
+      q: "prudente",
+      a: 2,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "descubrir",
+      a: 1,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "amistad",
+      a: 0,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "frecuentemente",
+      a: 3,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "perezoso",
+      a: 2,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "alimentar",
+      a: 1,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "montaña",
+      a: 0,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "valientemente",
+      a: 3,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "curioso",
+      a: 2,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
+    },
+    {
+      q: "imaginar",
+      a: 1,
+      choices: ["Sustantivo", "Verbo", "Adjetivo", "Adverbio"],
     },
   ],
 };
