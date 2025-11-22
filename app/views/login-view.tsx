@@ -39,9 +39,9 @@ export default function LoginView() {
         {/* 🧒 Espacio para el niño o logo superior */}
 
         <Image source={logoImg} style={styles.image} contentFit="contain"/>
-        <Text style={styles.appName}>Reforzando Matemáticas</Text>
+        <Text style={styles.appName}>Reforzando Lenguaje</Text>
         <Text style={styles.subtitle}>
-         Cada ejercicio fortalece tu mente
+         Cada ejercicio fortalece comprensión y expresión lingüística
         </Text>
 
         <TouchableOpacity
