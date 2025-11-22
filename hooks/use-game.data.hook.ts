@@ -4,8 +4,14 @@ import { useMemo } from "react";
 const games = [
   {
     id: 1,
-    title: "Completa la frase",
-    icon: "abacus",
+    title: "Completa la oración",
+    icon: "",
+    quizType: "choice",
+  },
+  {
+    id: 2,
+    title: "¿Qué puedo deducir?",
+    icon: "",
     quizType: "choice",
   },
 ];
@@ -20,7 +26,14 @@ const levelsByModule: Record<
     { id: "1b", name: "Nivel 2", difficulty: "low" },
     { id: "1c", name: "Nivel 3", difficulty: "low" },
     { id: "1d", name: "Nivel 4", difficulty: "low" },
-    { id: "1r", name: "Nivel 5", difficulty: "low" },
+    { id: "1e", name: "Nivel 5", difficulty: "low" },
+  ],
+  2: [
+    { id: "2a", name: "Nivel 1", difficulty: "medium" },
+    { id: "2b", name: "Nivel 2", difficulty: "medium" },
+    { id: "2c", name: "Nivel 3", difficulty: "medium" },
+    { id: "2d", name: "Nivel 4", difficulty: "medium" },
+    { id: "2e", name: "Nivel 5", difficulty: "medium" },
   ],
 };
 
@@ -387,6 +400,461 @@ const quizzesByLevel: Record<
       q: "El tigre es un animal muy __.",
       a: 2,
       choices: ["pequeño", "lento", "fuerte", "claro"],
+    },
+  ],
+  "2a": [
+    {
+      q: "Ana lleva un paraguas abierto mientras camina.",
+      a: 0,
+      choices: [
+        "Está lloviendo",
+        "Hace calor",
+        "Está anocheciendo",
+        "Es de madrugada",
+      ],
+    },
+    {
+      q: "El niño tiene el abrigo puesto dentro de la casa.",
+      a: 3,
+      choices: [
+        "Tiene sueño",
+        "Va a salir a jugar",
+        "Está enfermo",
+        "Hace frío",
+      ],
+    },
+    {
+      q: "Pedro llega a la escuela corriendo y sudando.",
+      a: 1,
+      choices: [
+        "Viene del recreo",
+        "Llegó tarde",
+        "No estudió",
+        "Está molesto",
+      ],
+    },
+    {
+      q: "La maestra guarda todos los libros y apaga la luz.",
+      a: 2,
+      choices: [
+        "Empieza la clase",
+        "Habrá una prueba",
+        "La clase terminó",
+        "Llegó la directora",
+      ],
+    },
+    {
+      q: "El gato está sentado frente a la puerta maullando.",
+      a: 0,
+      choices: ["Quiere salir", "Tiene sueño", "Busca comida", "Quiere jugar"],
+    },
+    {
+      q: "María mueve sus labios mientras lee en silencio.",
+      a: 1,
+      choices: [
+        "Está cantando",
+        "Está concentrada",
+        "Está asustada",
+        "Está copiando",
+      ],
+    },
+    {
+      q: "Luis se tapa los oídos cuando pasa un camión grande.",
+      a: 2,
+      choices: [
+        "Le gusta el camión",
+        "Tiene frío",
+        "Le molesta el ruido",
+        "Tiene miedo",
+      ],
+    },
+    {
+      q: "Sofía mira el reloj varias veces.",
+      a: 3,
+      choices: [
+        "Está triste",
+        "Tiene hambre",
+        "Busca su mochila",
+        "Espera algo",
+      ],
+    },
+    {
+      q: "El perro mueve la cola cuando ve a su dueño.",
+      a: 0,
+      choices: ["Está feliz", "Tiene frío", "Quiere dormir", "Está enfermo"],
+    },
+    {
+      q: "El niño pone la cabeza sobre la mesa y suspira.",
+      a: 2,
+      choices: [
+        "Está comiendo",
+        "Está jugando",
+        "Está cansado",
+        "Está leyendo",
+      ],
+    },
+  ],
+  "2b": [
+    {
+      q: "Carla esconde un papel detrás de su cuaderno cuando llega la profesora.",
+      a: 1,
+      choices: [
+        "Está ordenando",
+        "No quiere que lo vean",
+        "Busca algo",
+        "Está aburrida",
+      ],
+    },
+    {
+      q: "Javier sonríe mientras mira su celular.",
+      a: 0,
+      choices: [
+        "Recibió un mensaje que le gusta",
+        "Tiene hambre",
+        "Quiere dormir",
+        "Se enojó",
+      ],
+    },
+    {
+      q: "Lucas no trae su cuaderno y evita mirar al profesor.",
+      a: 2,
+      choices: [
+        "Está enfermo",
+        "Está distraído",
+        "Olvidó su tarea",
+        "Quiere participar",
+      ],
+    },
+    {
+      q: "La niña camina lentamente arrastrando los pies.",
+      a: 3,
+      choices: ["Tiene hambre", "Está feliz", "Ganó un premio", "Está cansada"],
+    },
+    {
+      q: "Claudia abre la ventana y respira hondo.",
+      a: 1,
+      choices: ["Tiene sed", "Necesita aire", "Busca a alguien", "Va a salir"],
+    },
+    {
+      q: "El profesor repite la misma instrucción varias veces.",
+      a: 0,
+      choices: [
+        "No le están prestando atención",
+        "Terminó la clase",
+        "Está enfermo",
+        "Quiere cantar",
+      ],
+    },
+    {
+      q: "Tomás levanta la mano muchas veces.",
+      a: 2,
+      choices: [
+        "Está enojado",
+        "Quiere salir",
+        "Quiere participar",
+        "Está durmiendo",
+      ],
+    },
+    {
+      q: "La niña aprieta fuerte su cuaderno contra el pecho.",
+      a: 3,
+      choices: ["Tiene frío", "Está jugando", "Quiere correr", "Está nerviosa"],
+    },
+    {
+      q: "En la clase todos guardan silencio mirando la puerta.",
+      a: 1,
+      choices: [
+        "Empieza el recreo",
+        "Esperan a alguien",
+        "Van a comer",
+        "Hay un ruido",
+      ],
+    },
+    {
+      q: "El niño se cubre con una manta incluso con luz.",
+      a: 0,
+      choices: [
+        "Tiene miedo",
+        "Quiere jugar",
+        "Está componiendo",
+        "Tiene calor",
+      ],
+    },
+  ],
+  "2c": [
+    {
+      q: "El restaurante está lleno y la gente hace fila afuera.",
+      a: 2,
+      choices: [
+        "Está por cerrar",
+        "Cocinan mal",
+        "Es muy popular",
+        "Está vacío",
+      ],
+    },
+    {
+      q: "Sofía guarda dinero en un frasco todos los días.",
+      a: 0,
+      choices: [
+        "Está ahorrando",
+        "Está castigada",
+        "Tiene frío",
+        "No quiere salir",
+      ],
+    },
+    {
+      q: "El auto no enciende aunque giran la llave varias veces.",
+      a: 3,
+      choices: [
+        "Está muy limpio",
+        "Tiene poca gasolina",
+        "El conductor está apurado",
+        "Está descompuesto",
+      ],
+    },
+    {
+      q: "El niño mira por la ventana con su mochila puesta.",
+      a: 1,
+      choices: [
+        "Tiene sueño",
+        "Está esperando irse",
+        "Quiere comer",
+        "Perdió algo",
+      ],
+    },
+    {
+      q: "Todos llevan gorro y bufanda en la calle.",
+      a: 2,
+      choices: ["Es de noche", "Hace calor", "Hace frío", "Van al cine"],
+    },
+    {
+      q: "La sala está decorada con globos y música alegre.",
+      a: 0,
+      choices: [
+        "Habrá una celebración",
+        "Hay un incendio",
+        "Van a estudiar",
+        "Es un funeral",
+      ],
+    },
+    {
+      q: "Martín revisa varias veces su mochila antes de salir.",
+      a: 3,
+      choices: [
+        "Tiene miedo",
+        "Está triste",
+        "Quiere jugar",
+        "No quiere olvidar nada",
+      ],
+    },
+    {
+      q: "La niña trae un regalo envuelto y lo esconde detrás de su espalda.",
+      a: 1,
+      choices: [
+        "Está cansada",
+        "Quiere dar una sorpresa",
+        "Está enojada",
+        "Lo quiere devolver",
+      ],
+    },
+    {
+      q: "El perro corre hacia la puerta apenas oye un ruido.",
+      a: 2,
+      choices: ["Tiene sueño", "Quiere comida", "Alguien llegó", "Está triste"],
+    },
+    {
+      q: "Lucas revisa su reloj mientras camina rápido.",
+      a: 0,
+      choices: [
+        "Tiene prisa",
+        "Busca su casa",
+        "Está perdido",
+        "Quiere descansar",
+      ],
+    },
+  ],
+  "2d": [
+    {
+      q: "Los estudiantes miran sus cuadernos y nadie habla.",
+      a: 1,
+      choices: [
+        "Es recreo",
+        "Están en una prueba",
+        "Es cumpleaños de alguien",
+        "Van a salir",
+      ],
+    },
+    {
+      q: "El vendedor baja la cortina del local.",
+      a: 0,
+      choices: [
+        "Cerró el negocio",
+        "Llegó un cliente",
+        "Está de vacaciones",
+        "Está limpiando",
+      ],
+    },
+    {
+      q: "Una mujer corre con una bolsa bajo la lluvia.",
+      a: 3,
+      choices: [
+        "Busca sombra",
+        "Quiere pasear",
+        "Va al gimnasio",
+        "Quiere proteger sus cosas",
+      ],
+    },
+    {
+      q: "El hombre revisa varias veces su billetera vacía.",
+      a: 1,
+      choices: [
+        "Tiene sueño",
+        "No tiene dinero",
+        "Busca un lápiz",
+        "Quiere correr",
+      ],
+    },
+    {
+      q: "Hay platos sucios y comida sin terminar en la mesa.",
+      a: 2,
+      choices: ["Se perdieron", "Aún no comen", "Ya comieron", "Van a cocinar"],
+    },
+    {
+      q: "Una niña sostiene un trofeo y sonríe.",
+      a: 0,
+      choices: [
+        "Ganó un premio",
+        "Tiene hambre",
+        "Está molesta",
+        "Quiere dormir",
+      ],
+    },
+    {
+      q: "El bus está detenido y la gente baja corriendo.",
+      a: 3,
+      choices: [
+        "Es muy tarde",
+        "Se equivocaron de bus",
+        "Es un día normal",
+        "Llegaron a su destino",
+      ],
+    },
+    {
+      q: "Juan trae un vendaje en la rodilla.",
+      a: 1,
+      choices: ["Está jugando", "Tuvo una caída", "Ganó algo", "Se mudó"],
+    },
+    {
+      q: "Una persona busca sombra y se abanica.",
+      a: 0,
+      choices: ["Hace calor", "Tiene miedo", "Está enferma", "Va a llover"],
+    },
+    {
+      q: "La biblioteca está completamente silenciosa.",
+      a: 2,
+      choices: [
+        "Están de fiesta",
+        "Están grabando",
+        "Todos están leyendo o estudiando",
+        "No hay personas",
+      ],
+    },
+  ],
+  "2e": [
+    {
+      q: "Una niña camina con un mapa abierto mientras mira los letreros de la calle.",
+      a: 1,
+      choices: [
+        "Busca una tienda",
+        "No sabe dónde está",
+        "Está jugando",
+        "Quiere correr",
+      ],
+    },
+    {
+      q: "Un grupo toma notas mientras observa un experimento.",
+      a: 3,
+      choices: [
+        "Están limpiando",
+        "Van a un paseo",
+        "Van a pintar",
+        "Están estudiando ciencias",
+      ],
+    },
+    {
+      q: "La maestra sienta a dos alumnos separados después de hablarles seriamente.",
+      a: 0,
+      choices: [
+        "Estaban molestándose",
+        "Tienen sueño",
+        "Hicieron una prueba",
+        "Van a ser premiados",
+      ],
+    },
+    {
+      q: "Luis revisa una lista con precios en el supermercado.",
+      a: 2,
+      choices: [
+        "Está aburrido",
+        "Busca amigos",
+        "Está comparando productos",
+        "Va al médico",
+      ],
+    },
+    {
+      q: "Una persona subraya partes importantes de un libro.",
+      a: 3,
+      choices: [
+        "Tiene hambre",
+        "Está jugando",
+        "Busca su cuaderno",
+        "Está estudiando",
+      ],
+    },
+    {
+      q: "La niña abre un paraguas aunque no hay lluvia.",
+      a: 1,
+      choices: ["Tiene frío", "Hace mucho sol", "Está dormida", "Va de noche"],
+    },
+    {
+      q: "Los padres preparan mochilas y revisan uniformes por la noche.",
+      a: 0,
+      choices: [
+        "Mañana hay clases",
+        "Van al cine",
+        "Es fin de semana",
+        "Hay vacaciones",
+      ],
+    },
+    {
+      q: "El niño guarda silenciosamente un jarrón roto debajo de la mesa.",
+      a: 2,
+      choices: [
+        "Está feliz",
+        "Quiere comer",
+        "Tiene miedo de que lo reten",
+        "Está estudiando",
+      ],
+    },
+    {
+      q: "La gente corre hacia la estación justo cuando se oye un ruido fuerte.",
+      a: 1,
+      choices: [
+        "Buscan sombra",
+        "El tren llegó",
+        "Van a comprar comida",
+        "Están jugando",
+      ],
+    },
+    {
+      q: "Una mujer prepara maletas y revisa documentos.",
+      a: 3,
+      choices: [
+        "Va a estudiar",
+        "Busca su celular",
+        "Quiere cocinar",
+        "Va de viaje",
+      ],
     },
   ],
 };
